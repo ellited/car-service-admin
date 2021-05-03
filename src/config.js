@@ -1,5 +1,5 @@
 const config = {
-    HOST: "http://localhost:8080/api/v1", // "http://localhost:8080"
+    HOST: "https://station-backend-app.herokuapp.com/api/v1", // "http://localhost:8080"
 }
 
 export default config;
