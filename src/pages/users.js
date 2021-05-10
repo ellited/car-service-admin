@@ -16,8 +16,8 @@ export const UsersList = (props) => (
     <List {...props}>
         <Datagrid>
             <TextField source="username" label="Логин" />
-            <TextField source="lastName" label="Имя"/>
-            <TextField source="firstName" label="Пароль" />
+            <TextField source="lastName" label="Фамилия"/>
+            <TextField source="firstName" label="Имя" />
 
             <ShowButton/>
         </Datagrid>
@@ -33,8 +33,8 @@ export const UserEdit = (props) => (
         <SimpleForm>
             <TextInput disabled source="id" />
             <TextInput source="username" label="Логин" />
-            <TextInput source="lastName" label="Имя"/>
-            <TextInput source="firstName" label="Пароль" />
+            <TextInput source="lastName" label="Фамилия"/>
+            <TextInput source="firstName" label="Имя" />
 
         </SimpleForm>
     </Edit>
@@ -46,8 +46,8 @@ export const UserCreate = (props) => (
         <SimpleForm>w
             <TextInput disabled source="id" />
             <TextInput source="username" label="Логин" />
-            <TextInput source="lastName" label="Имя"/>
-            <TextInput source="firstName" label="Пароль" />
+            <TextInput source="lastName" label="Фамилия"/>
+            <TextInput source="firstName" label="Имя" />
         </SimpleForm>
     </Create>
 );
@@ -58,8 +58,8 @@ export const UserShow = props => (
         <TabbedShowLayout>
             <Tab label="Информация">
                 <TextField source="username" label="Логин" />
-                <TextField source="lastName" label="Имя"/>
-                <TextField source="firstName" label="Пароль" />
+                <TextField source="lastName" label="Фамилия"/>
+                <TextField source="firstName" label="Фамилия" />
             </Tab>
         </TabbedShowLayout>
     </Show>

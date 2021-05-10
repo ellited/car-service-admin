@@ -20,8 +20,8 @@ export const BookingList = props => (
             <TextField source="date" label="Дата" />
             <TextField source="station.name" label="СТО"/>
             <TextField source="service.name" label="Услуга" />
-            <TextField source="user.lastName" label="Имя"/>
-            <TextField source="user.firstName" label="Фамилия" />
+            <TextField source="user.lastName" label="Фамилия"/>
+            <TextField source="user.firstName" label="Имя" />
             <ShowButton/>
         </Datagrid>
     </List>
@@ -35,11 +35,11 @@ export const BookingEdit = (props) => (
     <Edit title={<PostTitle />} {...props}>
         <SimpleForm>
             <TextInput disabled source="id" />
-            <DateTimeInput source="date" label="Date" />
-            <TextField source="station.name" label="Station"/>
-            <TextField source="service.name" label="Service" />
-            <TextInput source="user.lastName" label="Firstname"/>
-            <TextInput source="user.firstName" label="Surname" />
+            <DateTimeInput source="date" label="Дата" />
+            <TextField source="station.name" label="СТО"/>
+            <TextField source="service.name" label="Услуга" />
+            <TextInput source="user.lastName" label="Фамилия"/>
+            <TextInput source="user.firstName" label="Имя" />
         </SimpleForm>
     </Edit>
 );
@@ -49,10 +49,10 @@ export const BookingShow = props => (
         <TabbedShowLayout>
             <Tab label="Summary">
                 <DateField source="date" label="Date" />
-                <TextField source="station.name" label="Station"/>
-                <TextField source="service.name" label="Service" />
-                <TextField source="user.lastName" label="Firstname"/>
-                <TextField source="user.firstName" label="Surname" />
+                <TextField source="station.name" label="СТО"/>
+                <TextField source="service.name" label="Услуга" />
+                <TextField source="user.lastName" label="Фамилия"/>
+                <TextField source="user.firstName" label="Имя" />
             </Tab>
         </TabbedShowLayout>
     </Show>
