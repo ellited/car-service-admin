@@ -5,29 +5,29 @@ import LatLngInput from "../components/LatLongInput";
 export const StationsList = (props) => (
     <List {...props}>
         <Datagrid>
-            <TextField source="name" label="Name" />
-            <TextField source="location.phone" label="Phone"/>
-            <TextField source="location.city" label="City" />
+            <TextField source="name" label="Наименование" />
+            <TextField source="location.phone" label="Телефон"/>
+            <TextField source="location.city" label="Город" />
             <ShowButton/>
         </Datagrid>
     </List>
 );
 
 const PostTitle = ({ record }) => {
-    return <span>Post {record ? `"${record.name}"` : ''}</span>;
+    return <span>СТО {record ? `"${record.name}"` : ''}</span>;
 };
 
 export const StationEdit = (props) => (
     <Edit title={<PostTitle />} {...props}>
         <SimpleForm>
             <TextInput disabled source="id" />
-            <TextInput source="name" />
-            <TextInput source="location.phone" label="Phone"/>
-            <TextInput source="location.city" label="City"/>
+            <TextInput source="name" label="Наименование" />
+            <TextInput source="location.phone" label="Телефон"/>
+            <TextInput source="location.city" label="Город"/>
             <span>
-            <TextInput source="location.street" label="Street"/>
+            <TextInput source="location.street" label="Улица"/>
                 &nbsp;
-            <TextInput source="location.streetNumber" label="Street number"/>
+            <TextInput source="location.streetNumber" label="Номер дома"/>
             </span>
             <LatLngInput />
         </SimpleForm>
@@ -38,13 +38,13 @@ export const StationEdit = (props) => (
 export const StationCreate = (props) => (
     <Create title="Create a Station" {...props}>
         <SimpleForm>
-            <TextInput source="name" />
-            <TextInput source="location.phone" label="Phone"/>
-            <TextInput source="location.city" label="City"/>
+            <TextInput source="name" label="Наименование" />
+            <TextInput source="location.phone" label="Телефон"/>
+            <TextInput source="location.city" label="Город"/>
             <span>
-                <TextInput source="location.street" label="Street"/>
+                <TextInput source="location.street" label="Улица"/>
                 &nbsp;
-                <TextInput source="location.streetNumber" label="Street number"/>
+                <TextInput source="location.streetNumber" label="Номер дома"/>
             </span>
             <LatLngInput />
         </SimpleForm>
@@ -55,14 +55,14 @@ export const StationCreate = (props) => (
 export const StationShow = props => (
     <Show {...props}>
         <TabbedShowLayout>
-            <Tab label="Summary">
-                <TextField source="name" label="Name" />
-                <TextField source="location.phone" label="Phone"/>
+            <Tab label="Информация">
+                <TextField source="name" label="Наименование" />
+                <TextField source="location.phone" label="Телефон"/>
                 <TextField source="location.city" label="City"/>
                 <TextField source="location.street" label="Street"/>
-                <TextField source="location.streetNumber" label="Street number"/>
-                <TextField source="location.latitude" label="Latitude"/>
-                <TextField source="location.longitude" label="Longitude"/>
+                <TextField source="location.streetNumber" label="Номер дома"/>
+                <TextField source="location.latitude" label="Широта"/>
+                <TextField source="location.longitude" label="Долгота"/>
             </Tab>
         </TabbedShowLayout>
     </Show>

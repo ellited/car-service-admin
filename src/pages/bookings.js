@@ -17,18 +17,18 @@ import LatLngInput from "../components/LatLongInput";
 export const BookingList = props => (
     <List {...props}>
         <Datagrid rowClick="edit">
-            <TextField source="date" label="Date" />
-            <TextField source="station.name" label="Station"/>
-            <TextField source="service.name" label="Service" />
-            <TextField source="user.lastName" label="Firstname"/>
-            <TextField source="user.firstName" label="Surname" />
+            <TextField source="date" label="Дата" />
+            <TextField source="station.name" label="СТО"/>
+            <TextField source="service.name" label="Услуга" />
+            <TextField source="user.lastName" label="Имя"/>
+            <TextField source="user.firstName" label="Фамилия" />
             <ShowButton/>
         </Datagrid>
     </List>
 );
 
 const PostTitle = ({ record }) => {
-    return <span>Post {record ? `"${record.name}"` : ''}</span>;
+    return <span>Бронирование {record ? `"${record.date}"` : ''}</span>;
 };
 
 export const BookingEdit = (props) => (
